@@ -1,25 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import 'react-notifications/lib/notifications.css';
+import { useState } from 'react';
+import { NotificationContainer, NotificationManager } from 'react-notifications'
+import { ToDoBase } from './components/model';
+import { Tab } from './components/tabing';
+import { data } from './data/data';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Tab blog={data}/>
+  )
+
 }
 
-export default App;
+
+
+export default App; 

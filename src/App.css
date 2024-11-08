@@ -1,38 +1,197 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.black-area {
+  top: 0;
+  position: fixed;
+  height: 100%;
+  width: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 100ms;
+}
+
+.model {
+  position: fixed;
+  background-color: white;
+  color: black;
+  top: -120%;
+  left: 20%;
   text-align: center;
+  width: 50%;
+  padding: 2%;
+  border-radius: 10px;
+  height: 50%;
+  transition: 300ms;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.model p {
+  margin: 2%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.model h1,
+h2,
+h3,
+h4 {
+  margin: 2%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.model-cross {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  cursor: pointer;
+}
+
+.model-cross:hover {
+  font-size: large;
+  font-weight: bold;
+}
+
+.show-black-area {
+  opacity: 1;
+  width: 100%;
+}
+
+.show-model {
+  top: 20%;
+}
+
+.orange-big-base {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: orange;
+}
+
+.white-tilted-box {
+  background-color: white;
+  width: 60%;
+  margin: 3%;
+  box-shadow: 0 0 10px black;
+}
+
+.white-box {
+  position: relative;
+  background-color: white;
+  color: black;
+}
+
+.to-do-form {
+  background-color: rgb(184, 184, 209);
+  padding: 3%;
+}
+
+.to-do-form input {
+  border: none;
+  background-color: transparent;
+  font-size: large;
+  padding: 3%;
+  width: 60%;
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+.white-box ul {
+  width: 100%;
+  margin: 5%;
+}
+
+.white-box ul li {
+  border-bottom: 1px solid black;
+  margin: 2% 0;
+  text-align: left;
+  padding: 2.5%;
+  font-size: x-large;
+  overflow-wrap: break-word;
+  margin-right: 17%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.add-task {
+  background-color: orange;
+  border: none;
+  margin: 0 5%;
+  font-size: large;
+  padding: 3%;
+  height: 80%;
+  width: 20%;
+  border-radius: 10px;
+}
+
+.add-task:hover {
+  background-color: rgb(149, 101, 11);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.endTask {
+  margin: -3%;
+  color: white;
+  background-color: orange;
+  position: absolute;
+  right: 6%;
+  width: 3vw;
+  text-align: center;
+  border-radius: 50%;
+  font-size: xx-large;
+  padding: 1%;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.endTask:hover {
+  background-color: rgb(167, 112, 10);
+}
+
+.todo-done {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  color: black;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+
+.tab-buttons {
+  display: flex;
+  padding: 0% 5%
+}
+
+.tab-button {
+  list-style: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 0 6px;
+  border: none;
+  padding: 2% 5%;
+  background: grey;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.active-button {
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 10px  black;
+  bottom: 1%;
+}
+
+.data-area {
+  
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+  margin: 0 2%;
+  padding: 5%;
+  margin-bottom: 2%;
 }
